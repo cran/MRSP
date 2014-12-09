@@ -1,0 +1,42 @@
+citHeader("To cite MRSP in publications please use:")
+
+## R >= 2.8.0 passes package metadata to citation().
+if(!exists("meta") || is.null(meta)) meta <- packageDescription("MRSP")
+year <- sub("-.*", "", meta$Date)
+note <- sprintf("R package version %s", meta$Version)
+
+citEntry(entry = "Manual",
+         title = "{MRSP}:  Multinomial Response Models with Structured Penalties",
+         author = personList(as.person("Wolfgang Poessnecker")),
+         year = year,
+         note = note,
+         url = "http://CRAN.R-project.org/package=MRSP",
+
+         textVersion =
+         paste("Wolfgang Poessnecker",
+   	       sprintf("(%s).", year),	 
+               "MRSP:  Multinomial Response Models with Structured Penalties.",
+	       paste(note, ".", sep = ""),
+               "URL http://CRAN.R-project.org/package=MRSP"),
+	 header = "and/or"
+)
+
+citEntry(entry = "Article",
+  title        = "Variable Selection in General Multinomial Logit Models",
+  author       = personList(as.person("Gerhard Tutz"),
+                            as.person("Wolfgang Poessnecker"),
+                            as.person("Lorenz Uhlmann")),
+  journal      = "Computational Statistics and Data Analysis",
+  year         = "2015",
+  volume       = "82",
+  pages        = "207--222",
+
+  textVersion  =
+  paste("G. Tutz, W. Poessnecker and L. Uhlmann (2015).",
+        "Variable Selection in General Multinomial Logit Models.", 
+        "Computational Statistics and Data Analysis, 82, 207-222.")
+)
+
+
+
+

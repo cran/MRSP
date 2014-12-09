@@ -1,0 +1,61 @@
+useDynLib(MRSP)
+
+exportPattern("^[[:alpha:]]+")
+exportMethods(
+    "bootstrap",
+    "Brier",
+    "createResponse",
+    "cv",
+    "extract",
+    "fistaProximal",
+    "FPR.FNR",
+    "logLik",
+    "lossapprox",
+    "MRSP.fit",
+    "MRSP",
+    "MSE",
+    "nobs",
+    "penalty",
+    "plot",
+    "predict",
+    "proximterm",
+    "pval",
+    "refit",
+    "se",
+    "simulation",
+    "summary",
+    "updateEta",
+    "updatePenweights",
+    "which.max.cv",
+    "which.min.cv",
+    "show",
+    "AIC",
+    "BIC",
+    "update",
+    "getCall",
+    "select",
+    "coef",
+    "fitted",
+    "residuals"   
+)
+exportClasses(
+    "fista.control",
+    "MRSP",
+    "MRSP.bootstrap",
+    "MRSP.coef",
+    "MRSP.control",
+    "MRSP.cv",
+    "MRSP.list",
+    "MRSP.model",
+    "MRSP.se",
+    "MRSP.sim" 
+)
+
+# Import all packages listed as Imports or Depends
+import(
+  methods,
+  parallel,
+  compiler,
+  matrixcalc,
+  Formula
+)
